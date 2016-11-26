@@ -20,5 +20,6 @@ public class TranslatedNotes {
 	
 	//foreign key?
 	private String language;
-	
+
+
 }
