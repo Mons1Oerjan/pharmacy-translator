@@ -1,5 +1,11 @@
 package com.dal.pharmacy_translator.service;
 
-public class Translation {
+import java.util.List;
+
+import com.dal.pharmacy_translator.model.*;
+
+public interface Translation {
+	
+	public List<TranslatedNotes> getTranslatedNote(Code c, Language l);
 	
 }
