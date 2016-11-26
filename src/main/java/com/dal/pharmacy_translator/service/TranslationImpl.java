@@ -6,11 +6,10 @@ import com.dal.pharmacy_translator.model.*;
 
 public class TranslationImpl implements Translation{
 
-	public List<TranslatedNotes> getTranslatedNote(Code c, Language l){
-		int codeId = c.Id;
-		int languageId = l.Id;
+	public List<String> getTranslatedNote(String code, String language){
 		
-		
+		// Database Connection That Retrieves code and language
+		// getTranslatedNoteInDatabase(code, language)
 		
 		return null;
 	}

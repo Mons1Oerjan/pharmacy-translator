@@ -4,20 +4,28 @@
   <groupId>com.dal</groupId>
   <artifactId>pharmacy-translator</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>pharmacy-translator Maven Webapp</name>
+  <version>1.0</version>
+  <name>Pharmacy Prescription Translator</name>
   <url>http://maven.apache.org</url>
   
   	<properties>
+  	
+		<!-- Generic properties -->
+		<java.version>1.8</java.version>
 		<spring.version>4.0.1.RELEASE</spring.version>
+		<hibernate.version>4.3.5.Final</hibernate.version>
+		
 	</properties>
+	
   <dependencies>
+  
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		
 		<!-- Spring dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -36,6 +44,24 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		
+		
+		
+		
+		
+		
   </dependencies>
   
   <build>

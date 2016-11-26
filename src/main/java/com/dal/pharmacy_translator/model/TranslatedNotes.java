@@ -1,33 +1,24 @@
 package com.dal.pharmacy_translator.model;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="translatednotes")
 public class TranslatedNotes {
-	public int Id;
-	public int LanguageId;
-	public int CodeId;
-	public String Notes;
+
+
+	@Id
+	@Column(name="id")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
 	
-	public int getId() {
-		return Id;
-	}
-	public void setId(int id) {
-		Id = id;
-	}
-	public int getLanguageId() {
-		return LanguageId;
-	}
-	public void setLanguageId(int languageId) {
-		LanguageId = languageId;
-	}
-	public int getCodeId() {
-		return CodeId;
-	}
-	public void setCodeId(int codeId) {
-		CodeId = codeId;
-	}
-	public String getNotes() {
-		return Notes;
-	}
-	public void setNotes(String notes) {
-		Notes = notes;
-	}
+	private String translation;
+	
+	//foreign key?
+	private String language;
+	
 }

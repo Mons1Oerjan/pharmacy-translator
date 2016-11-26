@@ -6,6 +6,6 @@ import com.dal.pharmacy_translator.model.*;
 
 public interface Translation {
 	
-	public List<TranslatedNotes> getTranslatedNote(Code c, Language l);
+	public List<String> getTranslatedNote(String code, String language);
 	
 }
