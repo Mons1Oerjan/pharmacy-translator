@@ -19,7 +19,15 @@ public class Patient {
 	private String language;
 	private String address;
 	private String birthdate;
-	private String phonenumber;
+	private String phone;
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
 	private String email;
 	private String emergencyContactName;
 	private String emergencyContactPhoneNumber;
@@ -64,13 +72,7 @@ public class Patient {
 		this.birthdate = birthdate;
 	}
 
-	public String getPhonenumber() {
-		return phonenumber;
-	}
 
-	public void setPhonenumber(String phonenumber) {
-		this.phonenumber = phonenumber;
-	}
 
 	public String getEmail() {
 		return email;
@@ -99,7 +101,7 @@ public class Patient {
 	@Override
 	public String toString() {
 		return "Patient [id=" + p_id + ", name=" + name + ", language=" + language + ", address=" + address
-				+ ", birthdate=" + birthdate + ", phonenumber=" + phonenumber + ", email=" + email
+				+ ", birthdate=" + birthdate + ", phonenumber=" + phone + ", email=" + email
 				+ ", emergencyContactName=" + emergencyContactName + ", emergencyContactPhoneNumber="
 				+ emergencyContactPhoneNumber + "]";
 	}

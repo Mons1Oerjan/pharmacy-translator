@@ -1,5 +1,7 @@
 package com.dal.pharmacy_translator.dao;
 
+import java.util.List;
+
 import com.dal.pharmacy_translator.model.Patient;
 
 public interface PatientDAO {
@@ -9,4 +11,6 @@ public interface PatientDAO {
 	void delete(Patient patient);
 	
 	Patient findById(int id);
+	
+	List<Patient> getList();
 }
