@@ -1,5 +1,5 @@
 package com.dal.pharmacy_translator.service;
 
-public class TranslationImpl {
+public class TranslationImpl implements Translation {
 
 }
