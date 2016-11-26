@@ -10,6 +10,7 @@ import javax.persistence.Table;
 @Table(name="TranslatedNotes")
 public class TranslatedNotes {
 
+
 	@Id
 	@Column(name="id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -58,8 +59,5 @@ public class TranslatedNotes {
 		return "TranslatedNotes [tn_id=" + tn_id + ", note=" + note + ", fk_languageId=" + fk_languageId
 				+ ", fk_codeId=" + fk_codeId + "]";
 	}
-	
-	
-	
 	
 }
