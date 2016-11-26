@@ -48,8 +48,4 @@ public class Code {
 	public String toString() {
 		return "Code [id=" + id + ", code=" + code + ", definition=" + definition + "]";
 	}
-	
-	
-	
-	
 }
