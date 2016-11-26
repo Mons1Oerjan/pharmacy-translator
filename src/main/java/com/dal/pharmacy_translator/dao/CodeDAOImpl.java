@@ -1,36 +1,33 @@
 package com.dal.pharmacy_translator.dao;
 
 import java.util.List;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+
 import org.springframework.stereotype.Repository;
 
 import com.dal.pharmacy_translator.model.Code;
+import com.dal.pharmacy_translator.util.CustomHibernateDaoSupport;
 
 @Repository
-public class CodeDAOImpl implements CodeDAO {
-	
-	private SessionFactory sessionFactory;
-	public void setSessionFactory(SessionFactory sf){
-		this.sessionFactory = sf;
+public class CodeDAOImpl extends CustomHibernateDaoSupport implements CodeDAO {
+
+	public void addCode(Code code) {
+		getHibernateTemplate().save(code);
 	}
-	
-	
-	public void addNewCode(Code c){
-		Session session = this.sessionFactory.getCurrentSession();
-		session.persist(c);
-		System.out.println("added code " + c + "to the DB.");
+
+
+	public void updateCode(Code code) {
+		getHibernateTemplate().update(code);
 	}
-	
-	
-	@SuppressWarnings("unchecked")
-	public List<Code> listCodes(){
-		Session session = this.sessionFactory.getCurrentSession();
-		List<Code> codes = session.createQuery("from Code").list();
-		for (Code c : codes){
-			System.out.println("codes: "+c);
-		}
-		return codes;
+
+
+	public void deleteCode(Code code) {
+		getHibernateTemplate().delete(code);
+	}
+
+
+	public Code findById(int id) {
+		List l = getHibernateTemplate().find("from Code where c_id=?", id);
+		return (Code)l.get(0);
 	}
 	
 	
