@@ -7,22 +7,22 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="language")
+@Table(name="Language")
 public class Language {
 	
 	@Id
 	@Column(name="id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int l_id;
 	
 	private String language;
 
 	public int getId() {
-		return id;
+		return l_id;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.l_id = id;
 	}
 
 	public String getLanguage() {
@@ -35,7 +35,7 @@ public class Language {
 
 	@Override
 	public String toString() {
-		return "Language [id=" + id + ", language=" + language + "]";
+		return "Language [id=" + l_id + ", language=" + language + "]";
 	}
 	
 	

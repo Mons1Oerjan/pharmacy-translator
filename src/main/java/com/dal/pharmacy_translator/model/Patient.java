@@ -8,12 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="language")
+@Table(name="Patient")
 public class Patient {
 	@Id
 	@Column(name="id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int p_id;
 	
 	private String name;
 	private String language;
@@ -25,11 +25,11 @@ public class Patient {
 	private String emergencyContactPhoneNumber;
 
 	public int getId() {
-		return id;
+		return p_id;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.p_id = id;
 	}
 
 	public String getName() {
@@ -98,7 +98,7 @@ public class Patient {
 
 	@Override
 	public String toString() {
-		return "Patient [id=" + id + ", name=" + name + ", language=" + language + ", address=" + address
+		return "Patient [id=" + p_id + ", name=" + name + ", language=" + language + ", address=" + address
 				+ ", birthdate=" + birthdate + ", phonenumber=" + phonenumber + ", email=" + email
 				+ ", emergencyContactName=" + emergencyContactName + ", emergencyContactPhoneNumber="
 				+ emergencyContactPhoneNumber + "]";
