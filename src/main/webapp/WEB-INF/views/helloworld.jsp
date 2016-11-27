@@ -27,7 +27,7 @@
       <div class="col-sm-2">          
         <select class="form-control" name="langauge">
         	<c:forEach var="item" items="${languages}">
-        		<option value="${item.key}">${item.value}</option>
+        		<option value="${item.getId()}">${item.getName()}</option>
     		</c:forEach>
 	  </select>
       </div>

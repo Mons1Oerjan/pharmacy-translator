@@ -1,9 +1,10 @@
-package com.dal.pharmacy_translator.dao;
+package com.dal.pharmacy_translator.dao.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.dal.pharmacy_translator.dao.CodeDAO;
 import com.dal.pharmacy_translator.model.Code;
 import com.dal.pharmacy_translator.util.CustomHibernateDaoSupport;
 

@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Table(name="Patient")
 public class Patient {
 	@Id
-	@Column(name="id")
+	@Column(name="p_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int p_id;
 	
@@ -19,13 +19,13 @@ public class Patient {
 	private String language;
 	private String address;
 	private String birthdate;
-	private String phone;
-	public String getPhone() {
-		return phone;
+	private String phonenumber;
+	public String getPhonenumber() {
+		return phonenumber;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
 	}
 
 	private String email;
@@ -101,7 +101,7 @@ public class Patient {
 	@Override
 	public String toString() {
 		return "Patient [id=" + p_id + ", name=" + name + ", language=" + language + ", address=" + address
-				+ ", birthdate=" + birthdate + ", phonenumber=" + phone + ", email=" + email
+				+ ", birthdate=" + birthdate + ", phonenumber=" + phonenumber + ", email=" + email
 				+ ", emergencyContactName=" + emergencyContactName + ", emergencyContactPhoneNumber="
 				+ emergencyContactPhoneNumber + "]";
 	}

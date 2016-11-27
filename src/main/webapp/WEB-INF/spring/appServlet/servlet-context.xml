@@ -29,7 +29,7 @@
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost:3306/pharmacy"/>
         <property name="username" value="root"/>
-        <property name="password" value="passwd"/>
+        <property name="password" value="123456"/>
     </bean>	
     
     <bean id="sessionFactory"
@@ -45,6 +45,11 @@
     </bean>
     
 	<bean id="patientDao" class="com.dal.pharmacy_translator.dao.impl.PatientDAOImpl">
+	    <constructor-arg>
+	        <ref bean="sessionFactory" />
+	    </constructor-arg>
+	</bean>
+	<bean id="languageDao" class="com.dal.pharmacy_translator.dao.impl.LanguageDAOImpl">
 	    <constructor-arg>
 	        <ref bean="sessionFactory" />
 	    </constructor-arg>

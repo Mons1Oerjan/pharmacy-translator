@@ -11,11 +11,11 @@ import javax.persistence.Table;
 public class Language {
 	
 	@Id
-	@Column(name="id")
+	@Column(name="l_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int l_id;
 	
-	private String language;
+	private String name;
 
 
 	public int getId() {
@@ -26,17 +26,17 @@ public class Language {
 		this.l_id = id;
 	}
 
-	public String getLanguage() {
-		return language;
+	public String getName() {
+		return name;
 	}
 
-	public void setLanguage(String language) {
-		this.language = language;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override
 	public String toString() {
-		return "Language [id=" + l_id + ", language=" + language + "]";
+		return "Language [id=" + l_id + ", language=" + name + "]";
 	}
 	
 	

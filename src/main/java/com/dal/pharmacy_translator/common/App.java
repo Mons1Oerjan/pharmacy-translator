@@ -20,7 +20,7 @@ public class App {
 		patient1.setLanguage("Spanish");
 		patient1.setAddress("123 Memory Lane");
 		patient1.setBirthdate("01/01/1969");
-		patient1.setPhonenumber("902-555-5555");
+//		patient1.setPhonenumber("902-555-5555");
 		patient1.setEmail("TestUser@Test.com");
 		patient1.setEmergencyContactName("Emergency User");
 		patient1.setEmergencyContactPhoneNumber("902-444-4444");
