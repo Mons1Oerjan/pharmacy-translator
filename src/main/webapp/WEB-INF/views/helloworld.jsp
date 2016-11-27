@@ -18,10 +18,35 @@
 	<br>
 	
 <form class="form-horizontal" action="hello" method="get" id="seachEmployeeForm" role="form">
+	<div class="form-group">
+	  <label class="control-label col-sm-2" for="inputcode">Patient:</label>
+	  <div class="col-sm-2">
+      <select class="form-control" name="patient_id">
+        	<c:forEach var="item" items="${patients}">
+        		<option value="${item.getId()}">${item.getName()}</option>
+    		</c:forEach>
+	  </select>
+      </div>
+    </div>
+	<div class="form-group">
+	  <label class="control-label col-sm-2" for="inputcode">Medicine:</label>
+	  <div class="col-sm-2">
+      <select class="form-control" name="medicine_id">
+        	<c:forEach var="item" items="${medicines}">
+        		<option value="${item.getM_id()}">${item.getName()}</option>
+    		</c:forEach>
+	  </select>
+      </div>
+    </div>
     <div class="form-group">
 	  <label class="control-label col-sm-2" for="inputcode">Input Code:</label>
 	  <div class="col-sm-2">
-      <input type="text" name="inputcode" id="inputcode" class="form-control" required="true" placeholder="SD1002033"/>
+      <!-- <input type="text" name="inputcode" id="inputcode" class="form-control" required="true" placeholder="SD1002033"/>  -->
+      <select class="form-control" name="inputcode">
+        	<c:forEach var="item" items="${codes}">
+        		<option value="${item.getId()}">${item.getName()}</option>
+    		</c:forEach>
+	  </select>
       </div>
     </div>
     <div class="form-group">

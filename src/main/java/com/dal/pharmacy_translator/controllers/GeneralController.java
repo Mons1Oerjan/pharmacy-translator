@@ -63,25 +63,48 @@ public class GeneralController {
 		
 		List<Medicine> medicines = medicineDao.getList();
 		Medicine m1 = new Medicine(1, "Puffer", 1); //id (unique), name, foreign key to patient
+		Medicine m2 = new Medicine(2, "Tablet", 1);
+		Medicine m3 = new Medicine(3, "Eye Drops",2);
+		Medicine m4 = new Medicine(4,"Capsules",2);
+		medicines.add(m1);
+		medicines.add(m2);
+		medicines.add(m3);
+		medicines.add(m4);
 		
 		List<TranslatedNotes> notes = translatednotesDao.getList();
 		TranslatedNotes tn1 = new TranslatedNotes(1, "Toma una tableta al día", 1, 1); //id, translation, foreign key language, foreign key code
 		TranslatedNotes tn2 = new TranslatedNotes(2, "تناول قرص واحد يوميا", 4, 1); //id, translation, foreign key language, foreign key code
-		
+		TranslatedNotes tn3 = new TranslatedNotes(3, "Ta en tablett om dagen", 3, 1);
+		TranslatedNotes tn4 = new TranslatedNotes(3, "Isang tableta araw-araw", 5, 1);
+		notes.add(tn1);
+		notes.add(tn2);
+		notes.add(tn3);
+		notes.add(tn4);
+				
 		List<Code> codes = codeDao.getList();
-		Code c1 = new Code(1, "T1T1D", "Take 1 tablet daily", 1); //id (unique), code, definition, foreign key to medicine
-		
+		Code c1 = new Code(1, "T 1 T 1D", "Take 1 tablet daily", 1); //id (unique), code, definition, foreign key to medicine
+		Code c2 = new Code(2, "T 1 T BID", "Take 1 tablet twice daily", 1);
+		Code c3 = new Code(3, "T 2 CAP HS", "Take 1 tablet twice daily", 1);
+		Code c4 = new Code(4, "INH 2 PUFFS BID", "Take 1 tablet twice daily", 1);
+		Code c5 = new Code(5, "INS 1 GTT IN OU", "Take 1 tablet twice daily", 1);
+		Code c6 = new Code(6, "T 1 CAP Q8H", "Take 1 tablet twice daily", 1);
+		codes.add(c1);
+		codes.add(c2);
+		codes.add(c3);
+		codes.add(c4);
+		codes.add(c5);
+		codes.add(c6);
 		
 		//add to ModelAndView:
 		mv.addObject("patients", patients);
 		mv.addObject("languages", languages);
-		
-		
-		
+		mv.addObject("codes", codes);
+		mv.addObject("translatednotes", notes);
+		mv.addObject("medicines", medicines);
 		
 		if(!inputcode.equals("")) {
-			mv.addObject("note","Note");
-			mv.addObject("translatednote", "Translated Note");
+			mv.addObject("note", c1.getDefinition());
+			mv.addObject("translatednote", tn1.getNote());
 		}
 		
 		
