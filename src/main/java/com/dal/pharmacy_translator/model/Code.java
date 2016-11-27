@@ -8,15 +8,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Code")
+@Table(name="Codes")
 public class Code {
 	
 	@Id
-	@Column(name="id")
+	@Column(name="c_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int c_id;
 	
-	private String code;
+	private String name;
 	
 	private String definition;
 	
@@ -24,9 +24,9 @@ public class Code {
 
 	public Code(){}
 
-	public Code(int c_id, String code, String definition, int fk_medicineId) {
+	public Code(int c_id, String name, String definition, int fk_medicineId) {
 		this.c_id = c_id;
-		this.code = code;
+		this.name = name;
 		this.definition = definition;
 		this.fk_medicineId = fk_medicineId;
 	}
@@ -45,12 +45,12 @@ public class Code {
 	public void setFk_medicineId(int fk_medicineId) {
 		this.fk_medicineId = fk_medicineId;
 	}
-	public String getCode() {
-		return code;
+	public String getName() {
+		return name;
 	}
 
-	public void setCode(String code) {
-		this.code = code;
+	public void setName(String code) {
+		this.name = code;
 	}
 
 	public String getDefinition() {
@@ -63,7 +63,7 @@ public class Code {
 
 	@Override
 	public String toString() {
-		return "Code [c_id=" + c_id + ", code=" + code + ", definition=" + definition + ", fk_medicineId="
+		return "Code [c_id=" + c_id + ", code=" + name + ", definition=" + definition + ", fk_medicineId="
 				+ fk_medicineId + "]";
 	}
 

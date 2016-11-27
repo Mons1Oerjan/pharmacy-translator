@@ -12,7 +12,7 @@ public class TranslatedNotes {
 
 
 	@Id
-	@Column(name="id")
+	@Column(name="tn_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int tn_id;
 	
