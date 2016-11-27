@@ -17,6 +17,12 @@ public class Language {
 	
 	private String name;
 
+	public Language(){}
+
+	public Language(int l_id, String name) {
+		this.l_id = l_id;
+		this.name = name;
+	}
 
 	public int getId() {
 		return l_id;

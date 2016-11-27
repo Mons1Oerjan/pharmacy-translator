@@ -18,8 +18,14 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 		<property name="annotatedClasses">
 			<list>
 				<value>com.dal.pharmacy_translator.model.Patient</value>
+				<value>com.dal.pharmacy_translator.model.Language</value>
+				<value>com.dal.pharmacy_translator.model.Code</value>
+				<value>com.dal.pharmacy_translator.model.Medicine</value>
+				<value>com.dal.pharmacy_translator.model.TranslatedNotes</value>
 			</list>
 		</property>
+		
+		
     </bean>
 
 </beans>    

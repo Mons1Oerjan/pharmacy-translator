@@ -1,5 +1,7 @@
 package com.dal.pharmacy_translator.dao;
 
+import java.util.List;
+
 import com.dal.pharmacy_translator.model.TranslatedNotes;
 
 public interface TranslatedNotesDAO {
@@ -10,4 +12,6 @@ public interface TranslatedNotesDAO {
 	void delete(TranslatedNotes tn);
 	
 	public TranslatedNotes findById(int id);
+	
+	public List<TranslatedNotes> getList();
 }

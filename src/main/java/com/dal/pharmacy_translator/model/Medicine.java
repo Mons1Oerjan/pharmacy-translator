@@ -18,6 +18,14 @@ public class Medicine {
 	private String name;
 	
 	private int fk_patientId;
+	
+	public Medicine(){}
+
+	public Medicine(int m_id, String name, int fk_patientId) {
+		this.m_id = m_id;
+		this.name = name;
+		this.fk_patientId = fk_patientId;
+	}
 
 	public int getM_id() {
 		return m_id;

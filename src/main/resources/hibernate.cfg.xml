@@ -6,6 +6,10 @@
   <session-factory>
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="show_sql">true</property>  
-    <mapping resource="Patient.hbm.xml"/>
+    <mapping class="com.dal.pharmacy_translator.model.Patient"/>
+    <mapping class="com.dal.pharmacy_translator.model.Language"/>
+    <mapping class="com.dal.pharmacy_translator.model.Code"/>
+    <mapping class="com.dal.pharmacy_translator.model.Medicine"/>
+    <mapping class="com.dal.pharmacy_translator.model.TranslatedNotes"/>
   </session-factory>
 </hibernate-configuration>

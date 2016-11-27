@@ -22,7 +22,14 @@ public class Code {
 	
 	private int fk_medicineId;
 
-	
+	public Code(){}
+
+	public Code(int c_id, String code, String definition, int fk_medicineId) {
+		this.c_id = c_id;
+		this.code = code;
+		this.definition = definition;
+		this.fk_medicineId = fk_medicineId;
+	}
 
 	public int getId() {
 		return c_id;

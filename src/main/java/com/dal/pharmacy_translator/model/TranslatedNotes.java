@@ -21,6 +21,17 @@ public class TranslatedNotes {
 	private int fk_languageId;
 	
 	private int fk_codeId;
+	
+	public TranslatedNotes(){}
+
+	public TranslatedNotes(int tn_id, String note, int fk_languageId, int fk_codeId) {
+		this.tn_id = tn_id;
+		this.note = note;
+		this.fk_languageId = fk_languageId;
+		this.fk_codeId = fk_codeId;
+	}
+
+
 
 	public int getTn_id() {
 		return tn_id;

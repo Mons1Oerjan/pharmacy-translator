@@ -8,5 +8,8 @@
     <property name="show_sql">true</property>  
     <mapping class="com.dal.pharmacy_translator.model.Patient"/>
     <mapping class="com.dal.pharmacy_translator.model.Language"/>
+    <mapping class="com.dal.pharmacy_translator.model.Code"/>
+    <mapping class="com.dal.pharmacy_translator.model.Medicine"/>
+    <mapping class="com.dal.pharmacy_translator.model.TranslatedNotes"/>
   </session-factory>
 </hibernate-configuration>

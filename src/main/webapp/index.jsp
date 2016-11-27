@@ -14,9 +14,9 @@ pageEncoding="ISO-8859-1"%>
 <body>
 
 	<center>
-		<h2>Hello World</h2>
+		<h2>Pharmacy Prescription Translator Web App</h2>
 		<h3>
-			<a href="hello?name=Eric">Click Here</a>
+			<a href="hello?name=Eric">Enter</a>
 		</h3>
 	</center>
 </body>

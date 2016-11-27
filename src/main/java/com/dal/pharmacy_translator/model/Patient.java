@@ -20,6 +20,22 @@ public class Patient {
 	private String address;
 	private String birthdate;
 	private String phonenumber;
+	
+	public Patient(){}
+	
+	public Patient(int p_id, String name, String language, String address, String birthdate, String phonenumber,
+			String email, String emergencyContactName, String emergencyContactPhoneNumber) {
+		this.p_id = p_id;
+		this.name = name;
+		this.language = language;
+		this.address = address;
+		this.birthdate = birthdate;
+		this.phonenumber = phonenumber;
+		this.email = email;
+		this.emergencyContactName = emergencyContactName;
+		this.emergencyContactPhoneNumber = emergencyContactPhoneNumber;
+	}
+
 	public String getPhonenumber() {
 		return phonenumber;
 	}
