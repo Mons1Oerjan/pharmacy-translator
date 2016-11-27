@@ -27,7 +27,7 @@ public class CodeDAOImpl extends CustomHibernateDaoSupport implements CodeDAO {
 
 
 	public Code findById(int id) {
-		List l = getHibernateTemplate().find("from Code where c_id=?", id);
+		List<Object> l = getHibernateTemplate().find("from Code where c_id=?", id);
 		return (Code)l.get(0);
 	}
 	

@@ -12,11 +12,10 @@
 </head>
 <body>
 	<center>
-		<h2>Hello World</h2>
-		<h2>
-			${message} ${name}
-		</h2>
+		<h2>Pharmacy Language</h2>
 	</center>
+	<br>
+	<br>
 	
 <form class="form-horizontal" action="hello" method="get" id="seachEmployeeForm" role="form">
     <div class="form-group">
@@ -41,18 +40,19 @@
       </div>
     </div>
 </form>
-
-<div class="panel panel-default">
-  <div class="panel-heading">English</div>
-  <div class="panel-body">
-    ${note}
-  </div>
-</div>
-<div class="panel panel-default">
-  <div class="panel-heading">French</div>
-  <div class="panel-body">
-    ${translatednote}
-  </div>
+<div class="col-sm-12">
+	<div class="panel panel-default col-sm-6">
+	  <div class="panel-heading">Note</div>
+	  <div class="panel-body">
+	    ${note}
+	  </div>
+	</div>
+	<div class="panel panel-default col-sm-6">
+	  <div class="panel-heading">Translated Note</div>
+	  <div class="panel-body">
+	    ${translatednote}
+	  </div>
+	</div>
 </div>
 </body>
 </html>

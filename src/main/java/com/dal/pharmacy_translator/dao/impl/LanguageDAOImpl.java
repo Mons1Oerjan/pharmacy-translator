@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.dal.pharmacy_translator.dao.LanguageDAO;
 import com.dal.pharmacy_translator.model.Language;
-import com.dal.pharmacy_translator.model.Patient;
 import com.dal.pharmacy_translator.util.CustomHibernateDaoSupport;
 
 @Repository("languageDao")
@@ -36,7 +35,7 @@ public class LanguageDAOImpl extends CustomHibernateDaoSupport implements Langua
 	}
 
 	public Language findById(int id){
-		List l = getHibernateTemplate().find("from Language where l_id=?", id);
+		List<Object> l = getHibernateTemplate().find("from Language where l_id=?", id);
 		return (Language)l.get(0);
 		
 	}

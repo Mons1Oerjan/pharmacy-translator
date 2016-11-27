@@ -24,7 +24,7 @@ public class MedicineDAOImpl extends CustomHibernateDaoSupport implements Medici
 	}
 
 	public Medicine findById(int id) {
-		List l = getHibernateTemplate().find("from Medicine where m_id=?", id);
+		List<Object> l = getHibernateTemplate().find("from Medicine where m_id=?", id);
 		return (Medicine)l.get(0);
 	}
 
